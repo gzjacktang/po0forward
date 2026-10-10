@@ -1,0 +1,5 @@
+/bin/
+/private/
+*.tmp
+*.log
+.DS_Store

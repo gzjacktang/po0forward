@@ -1,0 +1,14 @@
+{
+  "node_id": "0011223344556677",
+  "revision": 1,
+  "rules": [{
+    "id": "1122334455667788",
+    "node_id": "0011223344556677",
+    "name": "示例转发",
+    "protocol": "both",
+    "listen_port": 30001,
+    "target_ip": "198.51.100.20",
+    "target_port": 50123,
+    "enabled": true
+  }]
+}

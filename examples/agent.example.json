@@ -1,0 +1,12 @@
+{
+  "panel_url": "https://panel.example.invalid",
+  "control_path": "/sync/000000000000000000000000",
+  "node_id": "0011223344556677",
+  "token": "0000000000000000000000000000000000000000000000000000000000000000",
+  "proxy_url": "",
+  "table_name": "pc_0011223344556677",
+  "state_file": "/var/lib/po0forward/agent-state.json",
+  "protected_ports": [22, 22282],
+  "dry_run": true,
+  "allow_local_http": false
+}

@@ -1,0 +1,20 @@
+[Unit]
+Description=Node control service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=po0panel
+Group=po0panel
+ExecStart=/usr/local/bin/po0forward-panel --config /etc/po0forward/panel.json
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/po0forward-panel
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target
