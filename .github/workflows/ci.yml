@@ -20,6 +20,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y nftables iproute2 python3
           sudo bash tests/netns.sh "$PWD/bin/agent-linux-amd64"
+      - name: Installation smoke test (disposable runner only)
+        run: sudo env GITHUB_ACTIONS=true bash tests/install-smoke.sh "$PWD/bin/panel-linux-amd64" "$PWD/bin/agent-linux-amd64"
       - uses: actions/upload-artifact@v4
         with:
           name: linux-binaries

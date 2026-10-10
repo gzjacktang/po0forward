@@ -251,6 +251,8 @@ sudo bash tests/netns.sh "$PWD/bin/agent-linux-amd64"
 
 测试只在三个临时命名空间里运行 nftables 和 TCP/UDP，验证 DNAT/SNAT、失败保留旧规则、离线启动恢复、停用和其他表保护；结束清理命名空间。不修改宿主防火墙、路由和 sysctl。GitHub Actions 执行相同测试并上传 Linux 二进制；**工作流实际通过才说明 Linux 集成验证成功**。真实 Telegram、运营商网络和你的 VPS 部署需要以后验证。
 
+另外，CI 会在一次性的 Linux runner 上执行 `tests/install-smoke.sh`，验证 systemd 安装、非 root 面板、配置权限和 Agent 预览。该脚本拒绝已有安装，只用于临时测试环境，**不要在 VPS 上运行**。
+
 | 目录 | 职责 |
 | --- | --- |
 | `cmd/panel`、`cmd/agent` | 程序入口 |
